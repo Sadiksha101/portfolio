@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/skills.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/ramro.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css//footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet"
+  />
+  
+  </head>
+  <body>
+    <header class="hero">
+      <!-- <div id="tsparticles"></div> -->
+      <h1>Hi, I'm Sadiksha Pradhan</h1>
+      <p>Web Developer | Designer | Problem Solver</p>
+    </header>
+    
+
+    <section id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2 class="header">About Me</h2>
+          <p>
+            I am a passionate web developer with a strong knack for creating
+            intuitive and visually appealing user interfaces. I thrive on
+            designing seamless user experiences while building robust,
+            responsive websites. With a deep interest in both front-end
+            development and UI/UX design, I focus on crafting digital solutions
+            that are not only functional but also user-friendly and
+            aesthetically pleasing. I love learning and exploring new
+            technologies.</p>
+           <p>Over the years, I have honed my skills in front-end technologies with frameworks such as React.js and UI/UX design, using tools like Figma. 
+            With a passion for both front-end development and UI/UX design, I aspire to bridge the gap between creative design and technical implementation. 
+            While coding is essential, my true drive comes from designing with empathy and ensuring that users’ 
+            needs are always at the forefront of my work.</p>
+            <p> When I’m not designing or coding, I enjoy immersing myself in literature and fiction books, exploring the vibrant worlds of webtoons and manga,
+               and unwinding with movies and TV shows that spark my imagination.</p>
+
+          
+        </div>
+        <div class="about-image">
+          <img src="download (11).jpg" alt="About Me" />
+        </div>
+      </div>
+    </section>
+    
+    <section id="skills">
+      <h1 class="headSkill">My Skills</h1>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 90%; --color: #f0a500;">
+            <img src="logos/html.png" alt="HTML Logo" />
+          </div>
+          <p>HTML</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 80%; --color: #4db5ff;">
+            <img src="logos/css.png" alt="CSS Logo" />
+          </div>
+          <p>CSS</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 75%; --color: #06b6d4;">
+            <img src="logos/tailwind-css.svg" alt="Tailwind Logo" />
+          </div>
+          <p>Tailwind</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 70%; --color: #7952b3;">
+            <img src="logos/bootstrap.svg" alt="Bootstrap Logo" />
+          </div>
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 85%; --color: #f7df1e;">
+            <img src="logos/javascript.svg" alt="JavaScript Logo" />
+          </div>
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 80%; --color: #61dafb;">
+            <img src="logos/react.svg" alt="React Logo" />
+          </div>
+          <p>React.js</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 60%; --color: #f24e1e;">
+            <img src="logos/figma.png" alt="Figma Logo" />
+          </div>
+          <p>Figma</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 65%; --color: #ff9a00;">
+            <img src="logos/illustrator.png" alt="Adobe Illustrator Logo" />
+          </div>
+          <p>Adobe Illustrator</p>
+        </div>
+        <div class="skill-box">
+          <div class="skill-circle" style="--progress: 75%; --color: #f05033;">
+            <img src="logos/git.png" alt="Git Logo" />
+          </div>
+          <p>Git & GitHub</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    
+
+    <section id="projects">
+      <h2 class="header">Projects</h2>
+      <div class="grid">
+        <div class="project" onclick="openModal('ramro')">
+          <img src="projects logos/ramro1.png" alt="Project 1" />
+          <h3>Ramro Designs</h3>
+        </div>
+        <div class="project" onclick="openModal('photomosaic')">
+          <img src="projects logos/pm.png" alt="Project 2" />
+          <h3>PhotoMosaic</h3>
+        </div>
+        <div class="project" onclick="openModal('qart')">
+          <img src="projects logos/qart.png" alt="Project 3" />
+          <h3>QaRt</h3>
+        </div>
+        <div class="project" onclick="openModal('goldsage')">
+          <img src="projects logos/goldsage.png" alt="Project 4" />
+          <h3>GOLDSAGE</h3>
+        </div>
+        <div class="project" onclick="openModal('ui')">
+          <img src="projects logos/invoice.png" alt="Project 5" />
+          <h3>UI</h3>
+        </div>
+        <div class="project" onclick="openModal('weavolution')">
+          <img src="projects logos/weave.png" alt="Project 6" />
+          <h3>Weavolution</h3>
+        </div>
+      </div>
+
+
+    <footer>
+      <p>© 2024 Sadiksha Pradhan. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.40.0/tsparticles.min.js"></script>
+    <script>
+  tsParticles.load("tsparticles"
+  , {
+  particles: {
+    number: {
+      value: 80, // Number of particles
+    },
+    shape: {
+      type: "circle",  // Shape of particles
+    },
+    color: {
+      value: "#523927",
+    },
+    size: {
+      value: 3,  // Size of particles
+    },
+    opacity: {
+      value: 0.5,  // Opacity of particles
+      random: true,
+    },
+    move: {
+      enable: true,
+      speed: 2,  // Speed of particle movement
+    },
+    links: {
+      enable: true,  // Enable links between particles
+      distance: 100,  // Maximum distance for linking particles
+      color: "#523927",//e links
+      opacity: 0.4,  // Opacity of the links
+      width: 1,  // Width of the links
+    },
+  },
+  interactivity: {
+    detectsOn: "window",  // Detects interaction on the entire window
+    events: {
+      onHover: {
+        enable: true,  // Enable interaction on hover
+        mode: "repulse",  // Repulse particles when mouse hovers
+      },
+      onClick: {
+        enable: true,  // Enable interaction on click
+        mode: "push",  // Add more particles on click
+      },
+    },
+  },
+  background: {
+    color: "#F9F5EC",  // Set background color
+  },
+});
+
+    </script> -->
+
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.ramro-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: "Libre Baskerville", serif;
+    padding: 20px; /* Adjust this value as needed */
+   
+  }
+  .ramro-page img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures no extra space below the image */
+  }
