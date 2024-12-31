@@ -17,14 +17,41 @@
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    max-width: 600px;
+    max-width: 800px;
     width: 90%;
   }
+
+  .modal-content p {
+    border: 2px solid #f0a500; /* Adjust the color and width as needed */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
   
   .modal-content img {
     max-width: 100%;
     margin-top: 10px;
   }
+
+  /* Image Grid Styles */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-grid a {
+  display: block;
+  overflow: hidden;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
   
   .close {
     position: absolute;
@@ -35,3 +62,63 @@
     color: #333;
   }
   
+ /* Tags Section Below Description */
+.tech-tags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 10px;
+
+   
+}
+
+.tag {
+    background-color: rgba(31, 32, 32, 0.2);
+    color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+   
+    font-size: 14px;
+}
+
+.visit-site-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #121212; /* Green color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.visit-site-button:hover {
+    background-color: #4f504f; /* Darker green on hover */
+}
+
+
+/* Technology Details Section */
+.tech-details {
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.tech-details ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.tech-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Show technology details when tag is clicked */
+.tech-details.show {
+  display: block;
+}

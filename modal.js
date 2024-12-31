@@ -1,6 +1,6 @@
 // Load modals from an external HTML file
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('modals.html')
+    fetch('projects/modal.html')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load modals.');
@@ -37,3 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   
+
+  function showTechDetails(tech) {
+    // Hide all details first
+    document.querySelectorAll('.tech-details').forEach(function (detail) {
+        detail.classList.remove('show');
+    });
+
+    // Show the details for the selected tech
+    const techDetails = document.getElementById(tech + '-details');
+    if (techDetails) {
+        techDetails.classList.add('show');
+    }
+}

@@ -1,12 +1,78 @@
 <!-- modals.html -->
 <div id="ramro-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('ramro')">&times;</span>
-      <h2>Ramro Designs</h2>
-      <p>Description of the Ramro Designs project.</p>
-      <img src="projects logos/ramro1.png" alt="Ramro Designs" />
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ramro')">&times;</span>
+    <h2>Ramro Designs</h2>
+    <p>
+      Ramro Designs (/rāmrō/), meaning "Beautiful Designs" in my native language Nepali, is an innovative platform created for the rug, carpet, and textile industry. It serves as a hub for inspiring design collections, providing valuable resources for both established professionals and aspiring designers. In collaboration with a colleague, I contributed to building the frontend of this platform for
+      <a href="https://alternative.com.np/" target="_blank" rel="noopener noreferrer">Alternative Technology Pvt. Ltd.</a>
+      <br>
+      <a href="https://ramrodesigns.com/beta/" target="_blank" class="visit-site-button">Visit Site</a>
+    </p>
+
+    <div class="tech-tags">
+      <span class="tag" onclick="showTechDetails('reactjs')">ReactJS</span>
+      <span class="tag" onclick="showTechDetails('tailwind')">Tailwind</span>
+      <span class="tag" onclick="showTechDetails('css')">CSS</span>
+      <span class="tag" onclick="showTechDetails('redux')">Redux</span>
+    </div>
+
+    <!-- Technology Details Section -->
+    <div id="reactjs-details" class="tech-details">
+      <h3>What I learned and used with ReactJS:</h3>
+      <ul>
+        <li>Component-based architecture for building reusable UI components.</li>
+        <li>Using react hooks.</li>
+        <li>Routing with React Router for seamless navigation.</li>
+      </ul>
+    </div>
+    <div id="css-details" class="tech-details">
+      <h3>What I learned and used with CSS:</h3>
+      <ul>
+        <li>Utility-first CSS framework for building custom designs quickly.</li>
+        <li>Responsive design using Tailwind's built-in breakpoints.</li>
+        <li>Using Tailwind for consistent spacing, colors, and typography.</li>
+        <li>Customization of themes through the Tailwind config file.</li>
+      </ul>
+    </div>
+    <div id="tailwind-details" class="tech-details">
+      <h3>What I learned and used with Tailwind:</h3>
+      <ul>
+        <li>Utility-first CSS framework for building custom designs quickly.</li>
+        <li>Responsive design using Tailwind's built-in breakpoints.</li>
+        <li>Using Tailwind for consistent spacing, colors, and typography.</li>
+        <li>Customization of themes through the Tailwind config file.</li>
+      </ul>
+    </div>
+
+    <div id="redux-details" class="tech-details">
+      <h3>What I learned and used with Redux:</h3>
+      <ul>
+        <li>Centralized state management for handling global app state.</li>
+        <li>Using Redux Toolkit for creating actions and reducers efficiently.</li>
+        <li>Async actions using `createAsyncThunk` for API calls.</li>
+        <li>Integrating Redux with React components for state updates.</li>
+      </ul>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="image-grid">
+     
+      <a href="/images/ramro/collection.png" target="_blank">
+        <img src="/images/ramro/collection.png" alt="Ramro Designs" />
+      </a>
+      <a href="/images/ramro/detail.png" target="_blank">
+        <img src="/images/ramro/detail.png" alt="Ramro Designs" />
+      </a>
+     
+      <a href="/images/ramro/all.png" target="_blank">
+        <img src="/images/ramro/all.png" alt="Ramro Designs" />
+      </a>
     </div>
   </div>
+</div>
+
+
   <div id="photomosaic-modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('photomosaic')">&times;</span>
