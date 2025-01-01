@@ -19,6 +19,8 @@
     text-align: center;
     max-width: 800px;
     width: 90%;
+    max-height: 90vh; /* Limit the height to 80% of the viewport */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
   }
 
   .modal-content p {
@@ -33,25 +35,20 @@
     margin-top: 10px;
   }
 
-  /* Image Grid Styles */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.image-grid a {
-  display: block;
-  overflow: hidden;
-}
-
-.image-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
-}
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 columns per row */
+    gap: 15px;
+    justify-content: center; /* Center the grid */
+    margin-top: 20px;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
   
   .close {
     position: absolute;
@@ -78,9 +75,13 @@
     color: black;
     padding: 5px 15px;
     border-radius: 5px;
-   
+    /* cursor: pointer; */
     font-size: 14px;
 }
+/* .tag.selected {
+  background-color: #2e2d2b; 
+  color: white;
+} */
 
 .visit-site-button {
     display: inline-block;
@@ -108,6 +109,10 @@
   text-align: left;
 }
 
+/* Show the Active Tech Details */
+.tech-details.show {
+  display: block;
+}
 .tech-details ul {
   list-style-type: disc;
   margin-left: 20px;

@@ -1,0 +1,183 @@
+
+
+.ui-page {
+    background-color: #F9F5EC;
+  }
+/* Container for the UI page content */
+.container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+/* Flex container for text and image */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Text content */
+.text {
+  flex: 1;
+  max-width: 60%;
+}
+
+/* Heading style */
+.heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+/* Description text styling */
+.description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  text-align: start;
+}
+
+/* Image styling */
+.image {
+  flex: 1;
+  max-width: 80%;
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  margin-top: 50px;
+
+  height: auto;
+}
+
+/* Main container for the images */
+.image-container {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #dbbbaa;
+  
+}
+
+/* Responsive grid layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Space between grid items */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual grid items */
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1; /* Ensures a consistent square container */
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #F9F5EC;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the entire image is visible without cropping */
+}
+
+/* Magnifying glass cursor */
+.zoomable {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out; /* Optional: for smooth zoom transition */
+  }
+  
+  /* You can add more styles if you'd like for zoom effect or focus */
+  .zoomable:hover {
+    transform: scale(1.1); /* Optional: zoom effect on hover */
+  }
+  
+/* Specific styling for Only1DollarDesign section */
+.only1dollar-section {
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centers text within the section */
+    
+    padding: 40px;
+    margin-top: 20px; /* Space above the section */
+  }
+  
+ 
+  
+  .only1dollar-section .text {
+    text-align: center; /* Center the text */
+    max-width: 100%;
+  }
+  
+  .only1dollar-section .heading {
+    font-size: 32px; /* Adjust heading size */
+    margin-bottom: 20px;
+  }
+  
+  .only1dollar-section .description {
+    font-size: 18px; /* Adjust description font size */
+    line-height: 1.8;
+  }
+  
+  /* Specific styling for the Only1DollarDesign image container */
+  .Onlyimage-container {
+    padding: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Onlygrid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 20px; /* Space between grid items */
+    position: relative; /* To allow layering */
+   
+  }
+  
+  .Onlygrid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1; /* Ensures a consistent square container */
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #F9F5EC;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ width: 500px;
+ height: 500px;
+    /* Offset items based on custom property */
+    transform: translateY(calc(var(--order, 0) * 20px));
+    transition: transform 0.3s ease; /* Smooth animation for any changes */
+  }
+  
+  /* Image styling remains the same */
+  .Onlygrid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+  }
+  a {
+    text-decoration: none;
+    color: inherit; /* Optional: Ensures the link matches the surrounding text color */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Optional: Adds an underline on hover for clarity */
+  }
