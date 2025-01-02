@@ -61,6 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Error loading weavolution.html:', error));
 
+    fetch('projects/1dollar.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load 1dollar.html');
+      }
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('1dollar-modal-container').innerHTML = html;
+    })
+    .catch(error => console.error('Error loading 1dollar.html:', error));
+
     
 });
 
