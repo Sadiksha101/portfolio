@@ -1,89 +1,72 @@
-#projects{
- 
+#projects {
   padding: 30px;
-  
-  height: 100vh;
   margin-bottom: 10px;
   background-color: #F9F5EC;
-  
 }
 
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-#projects .grid {
+.grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Exactly 4 projects per row */
-  gap: 20px; /* Space between grid items */
-  justify-content: center; /* Center the grid */
-  align-items: center; /* Center the content vertically */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
-  
-  .project {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project img {
-    width: 100%;
-    display: block;
-  }
-  
-  .project h3 {
-    padding: 15px;
-    background: #7F5D44;
-    color: white;
-    margin: 0;
-  }
-  .header {
-    font-size: 3rem; 
-    font-weight: bold; 
-    margin-bottom: 20px; 
-  
+
+/* Default grid layout for larger screens */
+.grid {
+  grid-template-columns: repeat(4, 1fr);
 }
-  
-  
-  .project {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project img {
-    width: 100%;
-    display: block;
-  }
-  
-  .project h3 {
-    padding: 15px;
-    background: #7F5D44;
-    color: white;
-    margin: 0;
-  }
-  .header {
-    font-size: 3rem; 
-    font-weight: bold; 
-    margin-bottom: 20px; 
-  
+
+.project {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+  width: 100%;
+  display: block;
+}
+
+.project h3 {
+  padding: 15px;
+  background: #7F5D44;
+  color: white;
+  margin: 0;
 }
 
 .grid a {
   text-decoration: none;
 }
 
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

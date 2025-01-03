@@ -27,3 +27,24 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 //skill section
 
+document.addEventListener('DOMContentLoaded', function() {
+  const skillsSection = document.getElementById('skills');
+  const skillsGrid = document.querySelector('.skills-grid');
+
+  function handleScroll() {
+    const rect = skillsSection.getBoundingClientRect();
+    // Check if the section is in the viewport
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      // Reset animation class to restart the animation
+      skillsGrid.classList.remove('animate');
+      // Force reflow to reset animation
+      void skillsGrid.offsetWidth; // This triggers a reflow
+      skillsGrid.classList.add('animate');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  // Check if the section is already in view on page load
+  handleScroll();
+});

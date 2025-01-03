@@ -2,31 +2,26 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: auto;
   display: flex;
   align-items: flex-start;
-  background-color: #F9F5EC;
+  background-color: #f9f5ec;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  height: auto; /* Default for smaller screens */
 }
 
-@media (min-width: 1024px) {
+/* Desktop: Cover full screen height */
+@media (min-width: 1025px) {
   #about {
-    min-height: calc(100vh - env(safe-area-inset-bottom)); /* Adjust height for devices with dynamic viewport */
-    flex-direction: row; 
+    height: 100vh; /* Full screen height */
   }
 }
 
-/* For Nest Hub or similar devices (landscape mode detection) */
-@media (min-width: 1024px) and (orientation: landscape) {
-  #about {
-    min-height: 100%;
-  }
-}
 .about-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
   width: 100%;
-  height: auto; /* Adjust height dynamically */
+  height: auto; /* Dynamic height */
 }
 
 .about-image {
@@ -51,6 +46,7 @@
   flex-direction: column;
   justify-content: center; /* Center text vertically */
   text-align: left;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .header {
@@ -60,75 +56,64 @@
 }
 
 /* Initial state: elements are hidden and moved further down */
-.about-text, .about-image {
+.about-text,
+.about-image {
   opacity: 0;
-  transform: translateY(50px); /* Start elements further down */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for opacity and transform */
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 /* When the element has the 'animate' class, apply the fade-in animation */
-.about-text.animate, .about-image.animate {
+.about-text.animate,
+.about-image.animate {
   opacity: 1;
-  transform: translateY(0); /* Animate to original position */
+  transform: translateY(0);
 }
 
 /* Staggered animation delays */
 .about-text {
-  transition-delay: 0.3s; /* Delay for text */
+  transition-delay: 0.3s;
 }
 
 .about-image {
-  transition-delay: 0.6s; /* Delay for image */
+  transition-delay: 0.6s;
 }
 
-/* Medium screens (768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  #about {
-    flex-direction: column; /* Stack elements vertically */
-    padding: 20px;
+/* Responsive Design: Tablets */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-wrap: wrap; /* Enable wrapping */
   }
 
   .about-image,
   .about-text {
-    width: 100%;
-    flex: none;
+    flex: 1 1 100%; /* Full width for each section */
   }
 
-  .about-image img {
-    width: 100%; /* Image takes full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
-  }
-
-  .header {
-    font-size: 2rem; /* Adjust font size for tablets */
+  .about-text {
+    text-align: center; /* Center text for better readability */
+    padding: 20px;
   }
 }
 
-/* Small screens (below 768px) */
-@media (max-width: 767px) {
+/* Responsive Design: Mobile */
+@media (max-width: 600px) {
   #about {
-    flex-direction: column; /* Stack elements vertically */
-    padding: 20px;
-  }
-
-  .about-image,
-  .about-text {
-    width: 100%;
-    flex: none;
-  }
-
-  .about-image img {
-    width: 100%; /* Image takes full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
+    padding: 10px; /* Add padding for spacing */
   }
 
   .about-text {
-    padding: 15px; /* Reduce padding for small screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    text-align: center; /* Center text */
+    padding: 15px;
   }
 
   .header {
-    font-size: 1.8rem; /* Smaller font size for mobile */
+    font-size: 1.8rem; /* Slightly smaller heading size */
+  }
+
+  .about-image img {
+    max-width: 100%; /* Ensure image fits screen */
+    width: 300px; /* Optional: limit width for small screens */
   }
 }

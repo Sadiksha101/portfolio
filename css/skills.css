@@ -62,24 +62,211 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for responsiveness */
   gap: 20px;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;       /* Limit the maximum width */
+  padding: 0 20px;         /* Add horizontal padding */
+  box-sizing: border-box; /* Ensure padding is included in total width */
 }
 
 #skills {
-  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center;    /* Center the content horizontally */
+  min-height: calc(100vh - var(--mobile-toolbar-height, 0px)); /* Adjust height dynamically */
+  padding: 0;
+  margin: 0;
+  background: linear-gradient( 45deg, #F9F5EC, #DBBFAA, #DBBFAA, #A67B5B);
+
+
+
+
   text-align: center;
-  background-color: #dbbbaa;
 }
+
 
 .headSkill {
   font-size: 3rem;
   font-weight: bold;
+margin-bottom: 100px;
 }
 
 
 
- 
+/* Keyframe animations */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframe animations */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Initial state for skill boxes */
+.skill-box {
+  opacity: 0;
+}
+
+/* Apply animations row-wise */
+.animate .skill-box:nth-child(1) {
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.animate .skill-box:nth-child(2) {
+  animation: slideInFromRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+
+.animate .skill-box:nth-child(3) {
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+
+.animate .skill-box:nth-child(4) {
+  animation: slideInFromRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+
+.animate .skill-box:nth-child(5) {
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+
+.animate .skill-box:nth-child(6) {
+  animation: slideInFromRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.animate .skill-box:nth-child(7) {
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
+}
+
+.animate .skill-box:nth-child(8) {
+  animation: slideInFromRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+
+.animate .skill-box:nth-child(9) {
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.6s;
+}
+.animate .skill-box:nth-child(10) {
+  animation: slideInFromRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
+}
+
+.animate .skill-box:nth-child(11) {
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.animate .skill-box:nth-child(12) {
+  animation: slideInFromRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.2s;
+}
+
+@media (max-width: 768px) {
+  .skill-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skill-circle::before {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-circle img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .skill-box p {
+    font-size: 12px;
+  }
+
+  .headSkill {
+    font-size: 2.5rem;
+  }
+
+  #skills {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-circle::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-circle img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .skill-box p {
+    font-size: 10px;
+  }
+
+  .headSkill {
+    font-size: 2rem;
+  }
+}
