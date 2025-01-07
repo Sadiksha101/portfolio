@@ -78,7 +78,8 @@
   min-height: calc(100vh - var(--mobile-toolbar-height, 0px)); /* Adjust height dynamically */
   padding: 0;
   margin: 0;
-  background: linear-gradient( 45deg, #F9F5EC, #DBBFAA, #DBBFAA, #A67B5B);
+  background: linear-gradient(to right, #F9F5EC, #DBBFAA, #DBBFAA, #A67B5B);
+
 
 
 
